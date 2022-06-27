@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+#include <math.h>
+int main()
+{
+    long A,k,sum=0,C;
+    cin>>A;
+    int k1=0,i;
+    k=A;
+    int B[100]={0};
+    while(A>0)
+    {
+        B[k1++]=A%2;
+        A=A/2;
+    }
+    for(i=0;i<k1;i++)
+    {
+        sum=sum+pow(2,i);
+    }
+    C=sum-k;
+    cout<<abs(C);
+}
